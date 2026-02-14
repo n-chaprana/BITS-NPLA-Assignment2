@@ -857,7 +857,9 @@ def index():
                     
                     <div class="card">
                         <h3>Sentiment Visualization</h3>
-                        <div id="chartContainer" class="chart-container"></div>
+                        <div id="chartContainer" class="chart-container">
+                            <canvas id="sentimentChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -930,7 +932,7 @@ def index():
             }
             
             function createChart(data) {
-                const ctx = document.getElementById('chartContainer');
+                const ctx = document.getElementById('sentimentChart');
                 
                 if (chartInstance) {
                     chartInstance.destroy();
